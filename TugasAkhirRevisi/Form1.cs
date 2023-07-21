@@ -105,7 +105,7 @@ namespace TugasAkhir
         private void button5_Click(object sender, EventArgs e)
         {
             connection.Open();
-            string QueryString = "Update dbo.produk set nama_produk'" + txtNama.Text + "', jenis_produk'" + txtJenis.Text + "', harga_produk ='" + txtHarga.Text + "' stok ='" + "'";
+            string QueryString = "Update dbo.produk set nama_produk ='" + txtNama.Text + "', jenis_produk ='" + txtJenis.Text + "', harga_produk ='" + txtHarga.Text + "', stok ='" + txtStok.Text +"'";
             SqlCommand cmd = new SqlCommand(QueryString, connection);
             cmd.CommandType = CommandType.Text; 
             cmd.ExecuteNonQuery();
